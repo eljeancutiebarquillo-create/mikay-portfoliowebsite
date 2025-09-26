@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantitative Methods Portfolio - Mikaela Sumagaysay</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #fdfdf0;
+      color: #2f4f2f;
+    }
+    header {
+      background: linear-gradient(90deg, #2ecc71, #f1c40f);
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      margin-bottom: 15px;
+    }
+    section {
+      padding: 60px 0;
+    }
+    h2 {
+      font-weight: 600;
+      color: #145a32;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0px 6px 12px rgba(0,0,0,0.1);
+      border: 1px solid #d4efdf;
+    }
+    .card img {
+      border-radius: 10px;
+    }
+    footer {
+      background: #145a32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .navbar {
+      background-color: #27ae60 !important;
+    }
+    .navbar .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+    .navbar .nav-link:hover {
+      color: #f9e79f !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="mikaela.jpg" alt="Mikaela Sumagaysay">
+    <h1>Mikaela Sumagaysay</h1
+    <h2> Intructor: Dr. Liboon</h2> 
+    <p>Quantitative Methods Portfolio</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#unit1">Unit 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#unit2">Unit 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#midterm">Midterm Case Study</a></li>
+          <li class="nav-item"><a class="nav-link" href="#unit3">Unit 3</a></li>
+          <li class="nav-item"><a class="nav-link" href="#unit4">Unit 4</a></li>
+          <li class="nav-item"><a class="nav-link" href="#unit5">Unit 5</a></li>
+          <li class="nav-item"><a class="nav-link" href="#project">Final Project</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reflections">Reflections</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About -->
+  <section id="about" class="container">
+    <h2 class="text-center mb-4">About This Course</h2>
+    <div class="card p-4 bg-light">
+      <p>This portfolio documents my journey in Quantitative Methods. 
+      It includes problem-solving with optimization, statistics, forecasting, and a midterm case study. 
+      Each part reflects both technical applications and my personal learning process.</p>
+    </div>
+  </section>
+
+  <!-- Unit 1 -->
+  <section id="unit1" class="container">
+    <h2 class="text-center mb-4">Unit 1 - Optimization (Excel Solver)</h2>
+    <div class="card p-4">
+      <p>In Unit 1, I applied <b>Linear Programming (LP)</b> using Excel Solver.  
+      Example: A bakery produces <b>cakes</b> and <b>cookies</b> with limited ingredients (flour & sugar).  
+      Objective: Maximize profit subject to resource constraints.  
+      The Solver tool provided the optimal production mix.</p>
+      <img src="unit1-solver.png" class="img-fluid mt-3" alt="Excel Solver Screenshot">
+      <p class="mt-3"><b>Interpretation:</b> Solver identified the most profitable product allocation while considering constraints.  
+      This shows how businesses can make better decisions with limited resources.</p>
+    </div>
+  </section>
+
+  <!-- Unit 2 -->
+  <section id="unit2" class="container">
+    <h2 class="text-center mb-4">Unit 2 - Statistics & Forecasting</h2>
+    <div class="card p-4">
+      <p>In Unit 2, I explored forecasting using <b>moving averages</b> and <b>regression models</b>.  
+      Example: Monthly sales data (₱): 50k, 55k, 52k, 60k, 62k, 65k.</p>
+      <ul>
+        <li><b>3-Month Moving Average:</b> Next forecasts → ₱59k, ₱62k, ₱63k</li>
+        <li><b>Regression Model:</b> Sales = 48,500 + 2,700×Month (R² ≈ 0.92)</li>
+      </ul>
+      <img src="unit2-chart.png" class="img-fluid mt-3" alt="Forecasting Chart">
+      <p class="mt-3"><b>Interpretation:</b> The regression model fits well (high R²), showing that sales are consistently increasing each month.  
+      This helps in planning production and budgeting.</p>
+    </div>
+  </section>
+
+  <!-- Midterm Case Study -->
+  <section id="midterm" class="container">
+    <h2 class="text-center mb-4">Midterm Case Study</h2>
+    <div class="card p-4 bg-light">
+      <h5>Case Study: Quick Sale Mart – Inventory & Sales Forecasting</h5>
+      <p>For the midterm, I analyzed a small grocery store’s sales performance. Using actual sales data, I applied:  
+        <ul>
+          <li>Excel Solver → to optimize inventory orders while minimizing costs.</li>
+          <li>Forecasting models → to predict next month’s demand for top products.</li>
+          <li>Decision analysis → to balance bulk purchasing discounts vs. storage limitations.</li>
+        </ul>
+      </p>
+      <img src="midterm-chart.png" class="img-fluid mt-3" alt="Midterm Case Study Results">
+      <p class="mt-3"><b>Output & Interpretation:</b>  
+      The Solver recommended purchasing fewer perishable items and focusing on high-demand goods.  
+      Forecasts predicted steady demand growth (approx. +5% monthly).  
+      This model helps the store avoid overstocking and improve profitability.</p>
+      <p class="mt-2"><b>Reflection:</b>  
+      This case study showed me how <i>quantitative methods</i> connect theory to business decision-making.  
+      It highlighted the importance of data-driven strategies in small businesses like Quick Sale Mart.</p>
+    </div>
+  </section>
+
+  <!-- Unit 3 -->
+  <section id="unit3" class="container">
+    <h2 class="text-center mb-4">Unit 3 - Simulation</h2>
+    <div class="card p-4">
+      <p><!-- Empty placeholder for now --></p>
+    </div>
+  </section>
+
+  <!-- Unit 4 -->
+  <section id="unit4" class="container">
+    <h2 class="text-center mb-4">Unit 4 - Decision Analysis / Game Theory</h2>
+    <div class="card p-4">
+      <p><!-- Empty placeholder for now --></p>
+    </div>
+  </section>
+
+  <!-- Unit 5 -->
+  <section id="unit5" class="container">
+    <h2 class="text-center mb-4">Unit 5 - System Modeling</h2>
+    <div class="card p-4">
+      <p><!-- Empty placeholder for now --></p>
+    </div>
+  </section>
+
+  <!-- Final Project -->
+  <section id="project" class="container">
+    <h2 class="text-center mb-4">Final Project</h2>
+    <div class="card p-4">
+      <p><!-- Empty placeholder for now --></p>
+    </div>
+  </section>
+
+  <!-- Reflections -->
+  <section id="reflections" class="container">
+    <h2 class="text-center mb-4">Reflections & Learnings</h2>
+    <div class="card p-4 bg-light">
+      <p><!-- Empty placeholder for now --></p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2 class="text-center mb-4">Contact / Feedback</h2>
+    <div class="card p-4">
+      <p>Email: <a href="mailto:mikaelasumagaysay@email.com">
+      mikaelasumagaysay@email.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mikaela Sumagaysay | Quantitative Methods Portfolio</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
