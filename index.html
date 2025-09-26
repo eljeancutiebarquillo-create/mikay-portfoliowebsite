@@ -110,52 +110,100 @@
     </div>
   </section>
 
-  <!-- Unit 1 -->
-  <section id="unit1" class="container">
-    <h2 class="text-center mb-4">Unit 1 - Optimization</h2>
-    <div class="card p-4">
-      <p><strong>Problem:</strong> Maximize profit from producing tables (₱500) and chairs (₱300) given constraints in carpentry (120 hrs) and finishing (60 hrs).</p>
-      <p><strong>Optimal Solution (Excel Solver):</strong> 20 tables, 0 chairs → Profit = ₱10,000</p>
-      <img src="unit1-solver.png" class="img-fluid mt-3" alt="Excel Solver Screenshot">
-    </div>
-  </section>
+ <!-- Unit 1 - Optimization -->
+<section id="unit1" class="container my-5">
+  <h2 class="text-center mb-3">Unit 1 — Optimization (Excel Solver)</h2>
+  <div class="row g-4">
+    <div class="col-md-7">
+      <div class="card p-3 h-100">
+        <h5>Problem (student-facing)</h5>
+        <p>A manufacturer produces <strong>Tables</strong> and <strong>Chairs</strong>. Profit: Tables ₱500, Chairs ₱300. Resources per unit: Carpentry & Finishing. Capacities: Carpentry=120 hrs, Finishing=60 hrs.</p>
 
-  <!-- Unit 2 -->
-  <section id="unit2" class="container">
-    <h2 class="text-center mb-4">Unit 2 - Statistics & Forecasting</h2>
-    <div class="card p-4">
-      <p><strong>Example Forecast:</strong> Monthly sales data (₱): 50k, 55k, 52k, 60k, 62k, 65k.</p>
-      <ul>
-        <li>3-Month Moving Average → Forecast: 59k, 62k, 63k</li>
-        <li>Regression Model: Sales = 48,500 + 2,700×Month (R² ≈ 0.92)</li>
-      </ul>
-      <img src="unit2-chart.png" class="img-fluid mt-3" alt="Forecasting Chart">
-    </div>
-  </section>
+        <h6>Formulation</h6>
+        <pre style="font-family: 'Courier New', monospace; background:#f7f7f7; padding:10px; border-radius:6px;">
+Let x1 = # Tables
+Let x2 = # Chairs
 
-  <!-- Midterm Project -->
-  <section id="midterm" class="container">
-    <h2 class="text-center mb-4">Midterm Project - Case Study</h2>
-    <div class="card p-4">
-      <p><strong>Case Study:</strong> Inventory optimization for furniture production.</p>
-      <p>Objective was to determine the most profitable production plan using Solver.  
-      Results showed that focusing on table production maximized profit under resource constraints.</p>
-      <p><strong>Result:</strong> 20 tables, 0 chairs → Profit = ₱10,000</p>
-      <p><strong>Reflection:</strong> This project showed how quantitative methods guide real business decisions 
-      by balancing resources, constraints, and profit goals.</p>
-      <img src="midterm-project.png" class="img-fluid mt-3" alt="Midterm Project Output">
-    </div>
-  </section>
+Maximize Z = 500x1 + 300x2
+Subject to:
+  3x1 + 2x2 ≤ 120   (carpentry)
+  2x1 + 1x2 ≤ 60    (finishing)
+  x1, x2 ≥ 0
+        </pre>
 
-  <!-- Reflections -->
-  <section id="reflections" class="container">
-    <h2 class="text-center mb-4">Reflections & Learnings</h2>
-    <div class="card p-4 bg-light">
-      <p>Through Units 1 and 2, and the Midterm Project, I gained practical skills in optimization and forecasting. 
-      I realized how mathematical models can be applied to real-world problems, helping businesses maximize 
-      resources and improve planning. This portfolio reflects my growth in analytical thinking and decision-making.</p>
+        <p><strong>Solver result (interpretation):</strong> Optimal solution: <strong>x1 = 20 tables, x2 = 0 chairs</strong> → Max profit ₱10,000. Recommendation: prioritize tables under current capacities.</p>
+      </div>
     </div>
-  </section>
+
+    <div class="col-md-5">
+      <div class="card p-3 text-center h-100">
+        <!-- make sure this file is uploaded with exactly this name -->
+        <img src="unit1-solver.png" alt="Excel Solver dialog and spreadsheet" class="img-fluid mb-2" style="max-width:360px;">
+        <p class="small text-muted mb-0">Figure 1: Excel Solver output (example).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Unit 2 - Statistics & Forecasting -->
+<section id="unit2" class="container my-5">
+  <h2 class="text-center mb-3">Unit 2 — Statistics & Forecasting</h2>
+  <div class="row g-4">
+    <div class="col-md-7">
+      <div class="card p-3 h-100">
+        <h5>Dataset</h5>
+        <p>Monthly sales (₱): 50,000; 55,000; 52,000; 60,000; 62,000; 65,000</p>
+
+        <h6>Results</h6>
+        <ul>
+          <li><strong>3-month moving average:</strong> Forecasts → 59,000; 62,000; 63,000</li>
+          <li><strong>Regression:</strong> Sales = 48,500 + 2,700 × Month (R² ≈ 0.92)</li>
+        </ul>
+
+        <p><strong>Interpretation:</strong> Both indicate an upward trend. Regression gives a stronger long-term fit; MA smooths short-term changes.</p>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card p-3 text-center h-100">
+        <!-- make sure this file is uploaded with exactly this name -->
+        <img src="unit2-chart.png" alt="Sales forecast chart" class="img-fluid mb-2" style="max-width:360px;">
+        <p class="small text-muted mb-0">Figure 2: Forecast chart (moving average & regression).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Midterm Project -->
+<section id="midterm" class="container my-5">
+  <h2 class="text-center mb-3">Midterm Project — Case Study (Quick Sale Mart)</h2>
+  <div class="row g-4">
+    <div class="col-md-7">
+      <div class="card p-3 h-100">
+        <h5>Case summary</h5>
+        <p>Objective: reduce stockouts and minimize total inventory cost. Methods: EOQ formula, Solver for order allocation, and short-term demand forecasting for top items.</p>
+
+        <h6>Key outputs</h6>
+        <ul>
+          <li>EOQ calculation (example): EOQ ≈ 2,449 units (for given D, S, H)</li>
+          <li>Solver recommendation: focus orders on high-turnover items; reduced perishable orders.</li>
+        </ul>
+
+        <p><strong>Reflection:</strong> Applying EOQ and Solver together showed how forecasting + inventory policy reduce cost and spoilage for a small store.</p>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card p-3 text-center h-100">
+        <!-- make sure this file is uploaded with exactly this name -->
+        <img src="midterm-chart.png" alt="Midterm case study chart" class="img-fluid mb-2" style="max-width:360px;">
+        <p class="small text-muted mb-0">Figure 3: Midterm case study output (recommended production/order plan).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
 
   <!-- Empty Placeholders -->
   <section id="unit3" class="container"><h2>Unit 3 - Simulation</h2><div class="card p-4"><p></p></div></section>
